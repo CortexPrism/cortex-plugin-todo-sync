@@ -1,7 +1,7 @@
 {
   "name": "cortex-plugin-todo-sync",
-  "version": "1.0.0",
-  "description": "TickTick / Todoist Task Sync — Bidirectional sync between Cortex agent tasks and personal to-do lists",
+  "version": "1.0.1",
+  "description": "TickTick / Todoist Task Sync \u2014 Bidirectional sync between Cortex agent tasks and personal to-do lists",
   "kind": "esm",
   "entryPoint": "mod.ts",
   "runtime": "deno",
@@ -9,22 +9,40 @@
   "license": "MIT",
   "repository": "https://github.com/CortexPrism/cortex-plugin-todo-sync",
   "homepage": "https://cortexprism.io/marketplace/plugins/todo-sync",
-  "capabilities": ["tools", "network:fetch"],
+  "capabilities": [
+    "tools",
+    "network:fetch"
+  ],
   "tools": [
     {
       "name": "todo_sync",
       "description": "Bi-directional sync tasks with Todoist/TickTick",
       "params": []
     },
-    { "name": "todo_create", "description": "Create task from agent context", "params": [] },
+    {
+      "name": "todo_create",
+      "description": "Create task from agent context",
+      "params": []
+    },
     {
       "name": "todo_mark_complete",
       "description": "Mark task complete and notify agent",
       "params": []
     },
-    { "name": "todo_list", "description": "List pending tasks", "params": [] }
+    {
+      "name": "todo_list",
+      "description": "List pending tasks",
+      "params": []
+    }
   ],
   "dependencies": {},
-  "peerDependencies": { "cortex": ">=1.0.0" },
-  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+  "peerDependencies": {
+    "cortex": ">=0.51.0"
+  },
+  "aiDisclosure": {
+    "tools": [
+      "Kilo (DeepSeek) \u2014 batch scaffold"
+    ],
+    "humanReview": true
+  }
 }
